@@ -1,23 +1,62 @@
 ---
+import { SITE } from "@config";
+import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
 ---
 
 <header>
-    <a href="/" class="title">portfolio</a>
+  <div class="header-wrapper">
+    <a href="/" class="title">{SITE.title}</a>
+    <Hamburger />
+  </div>
+  <nav>
     <Navigation />
+  </nav>
 </header>
 
 <style>
+  .title {
+    color: #eeeeee;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  header {
+    padding: 2rem 0;
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .title {
-        color: #eeeeee;
-        text-decoration: none;
-        margin-right: 10px;
+    nav {
+      display: flex !important;
+      flex-direction: row;
+      gap: 1rem;
     }
+  }
 </style>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener("click", () => {
+    console.log("click");
+    const isHidden = getComputedStyle(nav).display === "none";
+    nav.style.display = isHidden ? "flex" : "none";
+  });
+</script>
