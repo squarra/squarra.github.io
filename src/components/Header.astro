@@ -13,16 +13,20 @@ import Navigation from "./Navigation.astro";
     <Navigation />
   </nav>
 </header>
+<hr>
 
 <style>
   .title {
-    color: #eeeeee;
     text-decoration: none;
-    margin-right: 10px;
   }
+  .title:hover {
+    color: var(--text-color);
+  }
+
   header {
     padding: 2rem 0;
   }
+
   .header-wrapper {
     display: flex;
     justify-content: space-between;

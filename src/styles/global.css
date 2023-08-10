@@ -4,7 +4,7 @@
 
 :root {
   --width: 800px;
-  --font-family: "IBM Plex Mono", monospace;  
+  --font-family: "IBM Plex Mono", monospace;
   --font-size: 1em;
 
   --accent: #883aea;
@@ -15,7 +15,7 @@
   --background-light: #151515;
   --text-color: #eeeeee;
   --text-color-dark: #bbbbbb;
-  
+
   --border-radius: 5px;
 }
 
@@ -23,11 +23,55 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--text-color);
-  background: var(--background-dark);
+  background: var(--background-light);
   line-height: 1.5;
   width: 90%;
   max-width: var(--width);
   margin: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--text-color-dark);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--text-color-dark);
+}
+
+section {
+  padding: 2rem 0;
 }

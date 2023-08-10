@@ -1,25 +1,31 @@
 ---
+import { SITE } from "@config";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>Hello World</h1>
-  <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad suscipit
-    eveniet veniam voluptatum quaerat, consectetur earum, mollitia nobis, sint
-    odio perferendis! Dolores, est rerum? Inventore quas ab nesciunt debitis
-    repudiandae? Eveniet magnam fuga autem laborum cumque provident obcaecati
-    praesentium excepturi molestiae aliquid cupiditate accusamus numquam soluta
-    in blanditiis commodi voluptatum error enim, dicta vel rerum magni sit earum
-    eius! Sunt? Impedit illum delectus adipisci consequatur ea iusto asperiores
-    aperiam beatae autem repellendus quibusdam vero consequuntur dicta, dolorum
-    ab minus deserunt ipsam suscipit, fuga blanditiis quis repellat! Distinctio
-    aspernatur minus ad. Eos, ipsam. Aperiam odio vitae maiores beatae, nemo
-    optio enim harum aliquam praesentium voluptatum suscipit rem aliquid dolorum
-    ea, laborum saepe sed rerum explicabo ab aut sequi soluta ratione nam.
-    Fugiat, quam blanditiis nihil architecto exercitationem, aut, possimus
-    asperiores sapiente libero mollitia dolorem tempore doloremque. Placeat
-    similique repellat doloribus eligendi. Illo perferendis dicta, quod ex
-    recusandae doloremque modi soluta adipisci!
-  </p>
+  <section id="intro">
+    <h1>{SITE.author}</h1>
+    <p>
+      I'm a computer science student based in Germany. This website is a little
+      side project where I learn about web development and share some of my
+      personal projects.
+    </p>
+  </section>
+  <hr>
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>
+      This is a selection of my most recent and best projects. See all projects <a
+        href="/projects/"
+        class="link">here</a
+      >.
+    </p>
+  </section>
 </Layout>
+
+<style>
+  p {
+    max-width: 500px;
+  }
+</style>
