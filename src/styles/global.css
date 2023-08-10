@@ -20,12 +20,5 @@ body {
   max-width: 800px;
   width: 90%;
   background: #151515;
-}
-
-.violet {
-    --color-background-primary: #7c3aed80;
-}
-
-.green {
-    --color-background-primary: #3ae8b480;
+  --color-background-primary: #7c3aed80;
 }

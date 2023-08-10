@@ -1,0 +1,22 @@
+---
+import Navigation from "../components/Navigation.astro";
+import { ViewTransitions } from 'astro:transitions';
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <ViewTransitions />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Navigation />
+    <main transition:animate="fade">
+        <slot />
+    </main>
+  </body>
+</html>
