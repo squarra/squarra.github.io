@@ -1,0 +1,33 @@
+---
+import { SOCIALS } from "@config";
+import socialIcons from "@assets/socialIcons";
+---
+
+<ul>
+  {
+    SOCIALS.filter((social) => social.active).map((social) => (
+      <li>
+        <a href={social.href}>
+          <Fragment set:html={socialIcons[social.name]} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  ul li a {
+    display: flex;
+  }
+
+  ul li a:hover {
+    opacity: 0.8;
+    transform: rotate(5deg);
+  }
+</style>    

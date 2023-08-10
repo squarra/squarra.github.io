@@ -2,6 +2,7 @@
 import { SITE } from "@config";
 import CommonHead from "@components/CommonHead.astro";
 import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
 import "@styles/global.css";
 ---
 
@@ -14,5 +15,6 @@ import "@styles/global.css";
     <main transition:animate="morph">
         <slot />
     </main>
+    <Footer />
   </body>
 </html>

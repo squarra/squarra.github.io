@@ -38,6 +38,7 @@ const { url, title, description } = Astro.props;
   }
 
   .project:is(:hover, :focus-within) {
+    transform: rotate(0.5deg);
     background: radial-gradient(100% 100% at 100% 100%, var(--accent), transparent 200%);
   }
 
