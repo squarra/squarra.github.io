@@ -1,6 +1,7 @@
 ---
 import { SITE } from "@config";
 import Layout from "../layouts/Layout.astro";
+import ProjectView from "@components/ProjectView.astro";
 ---
 
 <Layout>
@@ -21,11 +22,18 @@ import Layout from "../layouts/Layout.astro";
         class="link">here</a
       >.
     </p>
+    <div class="projectview">
+      <ProjectView />
+    </div>
   </section>
 </Layout>
 
 <style>
   p {
     max-width: 500px;
+  }
+
+  .projectview {
+    margin-top: 1rem;
   }
 </style>

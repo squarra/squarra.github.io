@@ -1,0 +1,47 @@
+---
+interface Props {
+  url: string;
+  title: string;
+  description: string;
+}
+
+const { url, title, description } = Astro.props;
+---
+
+<li class="project">
+  <a href={url}>
+    <h4>{title} <span>&rarr;</span></h4>
+    <p>{description}</p></a
+  >
+</li>
+
+<style>
+  .project {
+    display: flex;
+    padding: 2px;
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 0 0 2px var(--text-color-dark);
+    cursor: pointer;
+  }
+
+  .project a {
+    width: 100%;
+    padding: calc(1.5rem - 1px);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    opacity: 0.8;
+  }
+
+  .project a h4 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .project:is(:hover, :focus-within) {
+    background: radial-gradient(100% 100% at 100% 100%, var(--accent), transparent 200%);
+  }
+
+  .project:is(:hover, :focus-within) h4 {
+    color: var(--accent-dark);
+  }
+</style>

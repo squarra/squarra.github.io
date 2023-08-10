@@ -1,0 +1,26 @@
+---
+import Project from "./Project.astro";
+
+const projects = await Astro.glob("../content/*md");
+---
+
+<ul>
+  {
+    projects.map((project) => (
+      <Project
+        url={project.url}
+        title={project.frontmatter.title}
+        description={project.frontmatter.description}
+      />
+    ))
+  }
+</ul>
+
+<style>
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+</style>
