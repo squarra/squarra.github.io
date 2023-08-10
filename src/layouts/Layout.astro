@@ -1,5 +1,5 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Header from '../components/Header.astro';
 import { ViewTransitions } from 'astro:transitions';
 import "../styles/global.css";
 ---
@@ -14,8 +14,8 @@ import "../styles/global.css";
     <title>Astro</title>
   </head>
   <body>
-    <Navigation />
-    <main transition:animate="fade">
+    <Header />
+    <main transition:animate="morph">
         <slot />
     </main>
   </body>
