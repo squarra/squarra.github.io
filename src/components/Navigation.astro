@@ -1,12 +1,20 @@
 <nav>
-  <a href="/">home</a>
-  <a href="/about/">about</a>
+  <a href="/projects/" class="nav-link">projects</a>
+  <a href="/about/" class="nav-link">about</a>
 </nav>
 
 <style>
-    a {
-        color: #eeeeee;
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .nav-link {
         text-decoration: none;
-        margin-right: 10px;
+        color: var(--text-color);
+    }
+
+    .nav-link:hover {
+        color: var(--text-color-dark)
     }
 </style>

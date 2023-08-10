@@ -1,0 +1,22 @@
+::-moz-selection {
+    color: var(--background-light);
+    background: var(--accent);
+  }
+  
+  ::selection {
+    color: var(--background-light);
+    background: var(--accent);
+  }
+  
+  *:focus {
+    outline: 2px solid var(--accent);
+  }
+  
+  *,
+  *::before,
+  *::after,
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
