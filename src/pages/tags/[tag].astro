@@ -1,0 +1,50 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Project from "@components/Project.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob("../posts/*.md");
+
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout>
+  <section>
+    <h2>Posts tagged with {tag}</h2>
+    <ul>
+      {
+        posts.map((post) => (
+          <Project
+            url={post.url}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+          />
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
