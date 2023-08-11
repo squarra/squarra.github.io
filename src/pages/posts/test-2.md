@@ -1,12 +1,9 @@
 ---
 layout: "@layouts/ProjectLayout.astro"
-url: "test.md"
-title: 'My First Blog Post'
-pubDate: 2022-07-01
+title: 'My Second Blog Post'
 description: "This is the first post of my new Astro blog."
 tags: ["astro", "blogging", "learning in public"]
-prio: 0
+prio: 3
 ---
 
 # Hallo
-0

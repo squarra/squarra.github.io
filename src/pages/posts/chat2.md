@@ -1,8 +1,6 @@
 ---
 layout: "@layouts/ProjectLayout.astro"
-url: "test.md"
 title: 'Another sample by ChatGPT'
-pubDate: 2022-07-01
 description: "This is the first post of my new Astro blog."
 tags: ["astro", "blogging", "learning in public"]
 prio: 0

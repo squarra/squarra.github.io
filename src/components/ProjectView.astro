@@ -1,7 +1,7 @@
 ---
 import Project from "./Project.astro";
 
-const projects = await Astro.glob("../content/*md");
+const projects = await Astro.glob("../pages/posts/*.md");
 ---
 
 <ul>
@@ -17,10 +17,10 @@ const projects = await Astro.glob("../content/*md");
 </ul>
 
 <style>
-    ul {
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
-    }
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
 </style>
