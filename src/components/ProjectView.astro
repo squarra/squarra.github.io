@@ -1,16 +1,17 @@
 ---
+import { getCollection } from "astro:content";
 import Project from "./Project.astro";
 
-const projects = await Astro.glob("../pages/posts/*.md");
+const projects = await getCollection("projects");
 ---
 
 <ul>
   {
     projects.map((project) => (
       <Project
-        url={project.url}
-        title={project.frontmatter.title}
-        description={project.frontmatter.description}
+        url={'/projects/' + project.slug}
+        title={project.data.title}
+        description={project.data.description}
       />
     ))
   }
