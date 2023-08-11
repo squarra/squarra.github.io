@@ -3,11 +3,12 @@ import { getCollection } from "astro:content";
 import Project from "./Project.astro";
 
 const projects = await getCollection("projects");
+const { maxProjects } = Astro.props;
 ---
 
 <ul>
   {
-    projects.map((project) => (
+    projects.slice(0, maxProjects).map((project) => (
       <Project
         url={'/projects/' + project.slug}
         title={project.data.title}

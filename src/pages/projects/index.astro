@@ -1,80 +1,29 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import TagView from "@components/TagView.astro";
+import ProjectView from "@components/ProjectView.astro";
+
+const allProjects = await getCollection("projects");
+const tags = [
+  ...new Set(allProjects.map((project) => project.data.tags).flat()),
+];
 ---
 
 <Layout>
   <section>
-    <TagView />
-  </section>
-  <section>
     <h1>Projects</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, cupiditate.
-      Quam eum beatae delectus repellendus excepturi aliquid aliquam. Ab
-      consectetur nam explicabo facilis quae vel quas sint earum. Ut, repellat.
-      Eius qui sequi rem dolores harum a, maiores quidem voluptatum deserunt
-      repudiandae illo sint nisi. Sunt, eius inventore. Maiores, magnam facilis.
-      Vitae, quo nostrum! Nobis exercitationem numquam recusandae hic? Quam!
-      Culpa odio fugit nisi ratione quam ducimus, quibusdam quisquam aut, eaque
-      explicabo consequatur consectetur sapiente, recusandae enim earum suscipit
-      facilis repudiandae tempora magnam. Rem sapiente voluptatibus dicta quidem
-      minima odit. Recusandae optio perferendis veritatis exercitationem
-      voluptatem corrupti excepturi iste reprehenderit quasi ad. Hic illum nobis
-      nostrum nam enim eaque tenetur quidem natus, a autem voluptates dicta
-      exercitationem explicabo accusantium ex. Perspiciatis incidunt, atque
-      vitae porro, necessitatibus nostrum molestiae numquam ex excepturi
-      inventore consequuntur aliquid at laborum asperiores possimus ducimus
-      dolorum, architecto quisquam nemo eius doloribus. Voluptates, consectetur.
-      Quisquam, eaque vero! Perferendis numquam, doloribus repellat atque
-      deleniti ex voluptatum repellendus assumenda libero eius nulla? Cum ea
-      dolor voluptatem nisi nobis debitis quo, a quidem enim omnis quod voluptas
-      iusto veniam vero? Maxime, eligendi recusandae magnam et placeat odio aut
-      excepturi corrupti vel itaque repellendus animi, aspernatur facilis
-      tempore labore earum cumque. Quas cupiditate deserunt quis odio, assumenda
-      harum hic quod maxime? Tenetur amet modi earum ullam labore, dolor quod
-      quibusdam, non dicta nisi quasi minus, fugit quae excepturi repellendus.
-      Ducimus possimus animi doloribus voluptate esse molestiae soluta quos
-      culpa quibusdam facilis. Libero natus architecto, asperiores laboriosam
-      quaerat maiores exercitationem sit provident nobis illum culpa labore
-      cumque placeat iusto, quia sequi. Quos nesciunt quo suscipit inventore
-      voluptates voluptatibus repudiandae optio cumque quas! Minima expedita
-      odit iure quasi voluptate perferendis reiciendis quam distinctio
-      obcaecati, corrupti earum facere quia, beatae neque, aspernatur
-      voluptatibus consequatur delectus sequi magni vitae molestias itaque
-      fugit! Voluptatem, recusandae impedit? Culpa architecto consequuntur
-      expedita? Omnis recusandae explicabo molestias, accusantium voluptate
-      adipisci itaque tenetur fugiat eos asperiores earum laboriosam id,
-      pariatur enim consectetur possimus dignissimos cum quaerat rerum est?
-      Vitae, veritatis. Omnis nam, inventore officiis cupiditate quibusdam
-      officia est impedit quae consequuntur, voluptatibus, aliquid quidem
-      similique excepturi cum facilis fugiat asperiores neque ipsum? Nemo quae
-      porro veritatis tempora modi perspiciatis quis. Voluptate fuga, nostrum
-      voluptatibus voluptatum ut nisi, illum veniam et, odit laboriosam possimus
-      molestiae iure minima earum incidunt. Ea ratione, esse minus maxime
-      quibusdam nam harum necessitatibus ullam exercitationem aperiam.
-      Aspernatur, perferendis velit. Vel officia minus exercitationem quidem
-      repellendus adipisci dolorum quaerat neque fuga sit architecto sed minima
-      incidunt voluptatem error dignissimos dolore quasi, harum, voluptates
-      eaque libero est rerum! In molestias iure eaque veritatis quae, dolorum
-      adipisci expedita, laborum ratione quibusdam saepe quos? Nobis nihil
-      magnam reiciendis dolor ipsam. Cumque soluta vel dolorem quod sint ea?
-      Provident, expedita amet? Saepe aliquid, quibusdam sed cumque dicta,
-      laborum impedit sequi porro reiciendis, libero in mollitia laboriosam.
-      Nobis magni ex architecto, inventore ab et reiciendis provident aut quam
-      dolor deserunt odit deleniti. Perspiciatis dicta perferendis cupiditate
-      eos voluptatum saepe, ipsa possimus temporibus at ducimus tempore facere
-      nam? Non, assumenda labore obcaecati optio corrupti, consectetur itaque
-      repellat ea sapiente aliquam quis tempore? Nemo. Amet doloremque voluptas
-      in eaque, officiis nisi qui voluptatem debitis. Accusamus, quae alias?
-      Sapiente suscipit odio esse blanditiis non, repellat necessitatibus odit,
-      commodi molestiae vel facilis error quo numquam ipsam! Quas quod iusto
-      voluptas tempore id aspernatur architecto. Iure, enim nemo odit ea quas
-      dolor rem ad explicabo perferendis porro officiis dicta sunt tempore
-      veniam molestias adipisci itaque non id? Nihil illum id doloribus nesciunt
-      accusantium cumque expedita eum tempore, saepe laboriosam vero minus
-      molestias sint dicta reiciendis necessitatibus ut ratione, soluta
-      perspiciatis amet asperiores explicabo. Minima officia ex velit?
-    </p>
+    <div class="projects-wrapper">
+      <TagView />
+      <ProjectView />
+    </div>
   </section>
 </Layout>
+
+<style>
+  .projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

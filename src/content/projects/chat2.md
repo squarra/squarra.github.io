@@ -1,7 +1,7 @@
 ---
 title: 'Another sample by ChatGPT'
 description: "This is the first post of my new Astro blog."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["astro"]
 prio: 0
 ---
 

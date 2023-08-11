@@ -28,25 +28,31 @@ const { projects } = Astro.props;
 
 <Layout>
   <section>
-    <TagView />
-  </section>
-  <section>
-    <h2>Projects tagged with {tag}</h2>
-    <ul>
-      {
-        projects.map((project) => (
-          <Project
-            url={'/projects/' + project.slug}
-            title={project.data.title}
-            description={project.data.description}
-          />
-        ))
-      }
-    </ul>
+    <h1>{tag}</h1>
+    <div class="projects-wrapper">
+      <TagView />
+      <ul>
+        {
+          projects.map((project) => (
+            <Project
+              url={'/projects/' + project.slug}
+              title={project.data.title}
+              description={project.data.description}
+            />
+          ))
+        }
+      </ul>
+    </div>
   </section>
 </Layout>
 
 <style>
+
+  .projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   ul {
     display: flex;
     flex-direction: column;
