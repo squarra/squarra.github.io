@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+
+const allProjects = await getCollection("projects");
+const tags = [
+  ...new Set(allProjects.map((project) => project.data.tags).flat()),
+];
+---
+
+<div class="tags">
+  {
+    tags.map((tag) => (
+      <p class="tag">
+        <a href={`/projects/${tag}`}>{tag}</a>
+      </p>
+    ))
+  }
+</div>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+</style>

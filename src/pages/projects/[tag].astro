@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Project from "@components/Project.astro";
+import TagView from "@components/TagView.astro";
 
 export async function getStaticPaths() {
   const allProjects = await getCollection("projects");
@@ -26,6 +27,9 @@ const { projects } = Astro.props;
 ---
 
 <Layout>
+  <section>
+    <TagView />
+  </section>
   <section>
     <h2>Projects tagged with {tag}</h2>
     <ul>
