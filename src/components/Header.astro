@@ -2,6 +2,7 @@
 import { SITE } from "@config";
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
+import ThemeToggler from "./ThemeToggler.astro";
 ---
 
 <header>
@@ -11,6 +12,7 @@ import Navigation from "./Navigation.astro";
   </div>
   <nav>
     <Navigation />
+    <ThemeToggler />
   </nav>
 </header>
 <hr>
@@ -37,6 +39,7 @@ import Navigation from "./Navigation.astro";
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   @media (min-width: 768px) {

@@ -11,12 +11,13 @@
   --accent: #883aea;
   --accent-light: #e1ccfa;
   --accent-dark: #310a65;
+  --accent-inverted: #008000;
 
   --background: #000000;
   --background-light: #151515;
   --text-color: #eeeeee;
   --text-color-dark: #bbbbbb;
-
+ 
   --border-radius: 5px;
 }
 
@@ -32,6 +33,13 @@ body {
   margin: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.green {
+  --accent: #008000;
+  --accent-light: #c6f6d5;
+  --accent-dark: #003200;
+  --accent-inverted: #883aea;
 }
 
 h1,
