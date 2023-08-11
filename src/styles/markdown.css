@@ -1,0 +1,14 @@
+pre {
+    background: none !important;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--text-color-dark);
+}
+
+ol {
+    list-style: inside lower-alpha;
+  }
+  
+  ul {
+    list-style: inside;
+  }

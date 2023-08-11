@@ -32,12 +32,18 @@ const { url, title, description } = Astro.props;
     margin-bottom: 0.5rem;
   }
 
-  .project:is(:hover, :focus-within) {
-    transform: rotate(0.5deg);
-    background: radial-gradient(100% 100% at 100% 100%, var(--accent), transparent 200%);
-  }
+  @media screen and (min-width: 768px) {
+    .project:is(:hover, :focus-within) {
+      transform: rotate(0.5deg);
+      background: radial-gradient(
+        100% 100% at 100% 100%,
+        var(--accent),
+        transparent 200%
+      );
+    }
 
-  .project:is(:hover, :focus-within) h4 {
-    color: var(--accent-dark);
+    .project:is(:hover, :focus-within) h4 {
+      color: var(--accent-dark);
+    }
   }
 </style>
