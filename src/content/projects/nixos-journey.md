@@ -45,3 +45,5 @@ The configuration is still very much a work in progress but I am very happy with
 - **File Manager**: Thunar
 
 Feel free to check out my [dotfiles](https://github.com/pierresquarr/nix-config) on GitHub.
+
+Screenshot of my current setup are to come.
