@@ -61,9 +61,9 @@ import ThemeToggler from "./ThemeToggler.astro";
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav");
 
-  hamburger.addEventListener("click", () => {
+  hamburger!.addEventListener("click", () => {
     console.log("click");
-    const isHidden = getComputedStyle(nav).display === "none";
-    nav.style.display = isHidden ? "flex" : "none";
+    const isHidden = getComputedStyle(nav!).display === "none";
+    nav!.style.display = isHidden ? "flex" : "none";
   });
 </script>
