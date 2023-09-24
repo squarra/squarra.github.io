@@ -1,0 +1,22 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<nav>
+  <a class={pathname === "/" ? "active" : ""} href="/">Home</a>
+  <a class={pathname === "/posts/" ? "active" : ""} href="/posts/">Posts</a>
+  <a class={pathname === "/about/" ? "active" : ""} href="/about/">About</a>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    font-weight: 600;
+    gap: 1rem;
+
+    a.active,
+    a:hover {
+      border-bottom: 2px solid var(--link-color);
+    }
+  }
+</style>
