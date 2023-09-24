@@ -9,7 +9,6 @@ const postsCollection = defineCollection({
     // In frontmatter, dates written without quotes around them are interpreted as Date objects
     pubDate: z.date(),
     description: z.string(),
-    sortOrder: z.number(),
     tags: z.array(z.string()),
   }),
 });

@@ -2,7 +2,6 @@
 title: "Deep Learning Ressources"
 pubDate: 2023-09-23
 description: "A collection of great resources to learn about neural networks"
-sortOrder: 3
 tags: ["deep-learning"]
 ---
 

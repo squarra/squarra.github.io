@@ -4,14 +4,30 @@ import Layout from "@layouts/Layout.astro";
 import Post from "@components/Post.astro";
 
 const allPosts = await getCollection("posts");
+allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <Layout>
+  <div class="tags">
+    <p>Topics:</p>
+    {tags.map((tag) => <a href={`/posts/${tag}`}>{tag}</a>)}
+  </div>
+
   <ul>
     {
       allPosts.map((post) => (
-        <Post url={'/posts/' + post.slug} title={post.data.title} />
+        <Post url={"/posts/" + post.slug} title={post.data.title} />
       ))
     }
   </ul>
 </Layout>
+
+<style>
+  .tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+</style>
