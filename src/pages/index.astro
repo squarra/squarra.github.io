@@ -1,7 +1,15 @@
 ---
+import PostView from "@components/PostView.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-	<h2>Yo</h2>
+  <p>
+    This website is a little side project where I learn about web development
+    and share some of my personal projects.
+  </p>
+  <section id="posts">
+    <h2>Recent posts</h2>
+    <PostView postCount="3" />
+  </section>
 </Layout>

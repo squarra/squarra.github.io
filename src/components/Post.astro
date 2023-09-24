@@ -1,4 +1,20 @@
 ---
-const { title, url } = Astro.props
+const { url, title, pubDate, description } = Astro.props;
 ---
-<li><a href={url}>{title}</a></li>
+
+<li class="post">
+  <h3><a href={url}>{title}</a></h3>
+  <time datetime={pubDate.toISOString()}
+    ><em> {pubDate.toDateString().split(" ").slice(1).join(" ")}</em>
+  </time>
+  <p>{description}</p>
+</li>
+
+<style>
+  .post * {
+    margin: 0;
+  }
+  .post time {
+    opacity: 0.8;
+  }
+</style>
