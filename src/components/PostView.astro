@@ -13,7 +13,7 @@ allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
       .slice(0, postCount)
       .map((post) => (
         <Post
-          url={"/posts/" + post.slug}
+          url={"/posts/" + post.slug + "/"}
           title={post.data.title}
           pubDate={post.data.pubDate}
           description={post.data.description}
