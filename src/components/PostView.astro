@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Post from "./Post.astro";
 
-const { postCount } = Astro.props;
+const { postCount, tag } = Astro.props;
 const allPosts = await getCollection("posts");
 allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 ---
@@ -10,6 +10,7 @@ allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 <ul>
   {
     allPosts
+      .filter((post) => !tag || post.data.tags?.includes(tag))
       .slice(0, postCount)
       .map((post) => (
         <Post

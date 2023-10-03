@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
+import TagView from "@components/TagView.astro";
 import PostView from "@components/PostView.astro";
 
 const allPosts = await getCollection("posts");
@@ -8,19 +9,10 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 ---
 
 <Layout>
-  <div class="tags">
-    <p>Topics:</p>
-    {tags.map((tag) => <a href={`/posts/${tag}`}>{tag}</a>)}
-  </div>
+  <TagView />
 
-  <PostView />
+  <section id="posts">
+    <h2>All posts</h2>
+    <PostView />
+  </section>
 </Layout>
-
-<style>
-  .tags {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-</style>
