@@ -7,6 +7,5 @@ const { frontmatter } = Astro.props;
     <time datetime={frontmatter.pubDate.toISOString()}>
         {frontmatter.pubDate.toDateString().split(' ').slice(1).join(' ')}
     </time>
-    <p><em>{frontmatter.description}</em></p>
     <slot />
 </Layout>
