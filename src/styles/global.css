@@ -68,7 +68,6 @@ code {
 blockquote {
   border-left: 1px solid var(--text-color);
   padding-left: 20px;
-  font-style: italic;
 }
 
 pre {
