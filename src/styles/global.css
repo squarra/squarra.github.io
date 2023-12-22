@@ -1,9 +1,7 @@
-@import url("./fonts.css");
-
 :root {
   --width: 800px;
-  --font-main: "Noto Sans", sans-serif;
-  --font-scale: 1em;
+  --font-main: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  --font-scale: 1.1em;
   --background-color: #162a33;
   --heading-color: #F8F4E3;
   --text-color: #efe6dd;
