@@ -6,7 +6,7 @@ import Navigation from "@components/Navigation.astro";
 <header>
   <h1 class="title"><a href="/">Pierre Squarra</a></h1>
   <div class="subtitle-container">
-    <p>Computer science student</p>
+    <p style="margin: 0;">Computer science student</p>
     <Socials />
   </div>
   <hr />
@@ -16,26 +16,18 @@ import Navigation from "@components/Navigation.astro";
 <style>
   header {
     padding: 3rem 0 1rem 0;
-    font-size: 1.15rem;
-  }
-  header a {
-    text-decoration: none;
+    font-size: larger;
   }
   .title {
     margin: 0;
     color: var(--link-color);
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: bold;
   }
   .subtitle-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
     gap: 0.5rem;
-  }
-  .subtitle-container p {
-    margin: 0;
   }
 </style>

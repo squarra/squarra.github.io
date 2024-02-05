@@ -1,35 +1,19 @@
 :root {
-  --width: 800px;
-  --font-main: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  --font-scale: 1.1em;
-  --background-color: #162a33;
-  --heading-color: #F8F4E3;
   --text-color: #efe6dd;
   --link-color: #FCAF58;
-  --code-background-color: #091216;
+  --background-color: #162a33;
+  --code-background-color: #1d1f21;
 }
 
 body {
-  font-family: var(--font-main);
-  font-size: var(--font-scale);
+  font-family: system-ui;
   margin: auto;
   width: 90%;
-  max-width: var(--width);
-  text-align: left;
+  max-width: 800px;
   background-color: var(--background-color);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  line-height: 1.5;
   color: var(--text-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
 }
 
 a {
@@ -56,34 +40,10 @@ img {
   height: auto;
 }
 
-code {
-  font-family: monospace;
-  padding: 3px;
-  background-color: var(--code-background-color);
-  border-radius: 3px;
-}
-
-blockquote {
-  border-left: 1px solid var(--text-color);
-  padding-left: 20px;
-}
-
 pre {
-  background-color: var(--code-background-color) !important;
-}
-
-.inline {
-  width: auto !important;
-}
-
-.highlight,
-.code {
-  padding: 1px 15px;
-  background-color: var(--code-background-color);
+  padding: 10px;
   border-radius: 3px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  overflow-x: auto;
+  background-color: var(--code-background-color) !important;
 }
 
 svg {
@@ -92,8 +52,4 @@ svg {
 
 svg:hover {
   fill: var(--link-color);
-}
-
-.flex {
-  display: flex;
 }
