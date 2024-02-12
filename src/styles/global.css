@@ -5,15 +5,18 @@
   --code-background-color: #1d1f21;
 }
 
-body {
+html {
   font-family: system-ui;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
   margin: auto;
   width: 90%;
   max-width: 800px;
-  background-color: var(--background-color);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  color: var(--text-color);
 }
 
 a {
