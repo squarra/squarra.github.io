@@ -1,11 +1,11 @@
 ---
-import Layout from "./Layout.astro";
+import Layout from "@layouts/Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <Layout>
-    <time datetime={frontmatter.pubDate.toISOString()}>
-        {frontmatter.pubDate.toDateString().split(' ').slice(1).join(' ')}
+    <time datetime={new Date(frontmatter.pubDate).toISOString()}>
+        {new Date(frontmatter.pubDate).toDateString()}
     </time>
     <slot />
 </Layout>

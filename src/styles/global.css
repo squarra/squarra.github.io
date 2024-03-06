@@ -4,6 +4,11 @@
   --background-color: #242424;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 html {
   font-family: system-ui;
   overflow-wrap: break-word;
@@ -19,8 +24,11 @@ body {
 
 a {
   color: var(--link-color);
-  cursor: pointer;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -30,6 +38,7 @@ main {
 hr {
   border: 0;
   border-top: 1px solid;
+  margin: 1rem 0 1rem 0;
 }
 
 img {
@@ -48,4 +57,9 @@ svg {
 
 svg:hover {
   fill: var(--link-color);
+}
+
+time {
+  font-style: italic;
+  opacity: 0.8;
 }
