@@ -4,6 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout>
+    <h2>{frontmatter.title}</h2>
     <time datetime={new Date(frontmatter.pubDate).toISOString()}>
         {new Date(frontmatter.pubDate).toDateString()}
     </time>

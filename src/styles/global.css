@@ -6,7 +6,6 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 html {
@@ -38,7 +37,6 @@ main {
 hr {
   border: 0;
   border-top: 1px solid;
-  margin: 1rem 0 1rem 0;
 }
 
 img {
@@ -62,4 +60,16 @@ svg:hover {
 time {
   font-style: italic;
   opacity: 0.8;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.post p {
+  margin: 0;
 }

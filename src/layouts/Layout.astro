@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import "@styles/global.css";
@@ -12,8 +12,8 @@ import "@styles/global.css";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content="Computer Science Student">
+        <ClientRouter />
         <title>Pierre Squarra</title>
-        <ViewTransitions />
     </head>
     <body>
         <Header />
