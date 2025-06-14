@@ -1,0 +1,19 @@
+---
+layout: '@layouts/PostLayout.astro'
+title: "tinygraph: PyTorch Geometric for tinygrad"
+pubDate: 2025-03-21
+description: "A Graph Neural Network (GNN) library built on top of tingrad"
+---
+
+[PyG](https://github.com/pyg-team/pytorch_geometric) (PyTorch Geometric) is a library built upon PyTorch to easily write and train Graph Neural Networks (GNNs) for a wide range of applications related to structured data.
+
+**GitHub Repository:** [github.com/squarra/tinygraph](https://github.com/squarra/tinygraph/)
+
+In order to learn about GNNs and [tinygrad](https://github.com/tinygrad/tinygrad) I decided t built the equivalent of what PyG is for pytorch for tinygrad. This was a lot of fun. Unfortunately I lost a lot of progress which was sitting on my server, when I accidently formatted the partition. Here are the main things I implemented:
+
+- Compatibility layer for working with [PyG datasets](https://pytorch-geometric.readthedocs.io/en/2.6.0/modules/datasets.html)
+- `Data` and `HeteroData` like you would find them in PyG, in a lot less lines of code
+- The basic `GCNConv` and `SAGEConv` layers. On the work I lost, I had a working (but very slow `HGTConv`)
+- Some basic examples using the beauty of tinygrad
+
+My biggest takeaway is how much better it felt working with tinygrad compared to pytorch. The API is feels much more correct and I hope it finds some more adoption with increasing speed.
