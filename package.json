@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "astro": "^5.18.0",
+    "@astrojs/mdx": "^5.0.3",
+    "astro": "^6.1.5",
     "sass": "^1.68.0"
   }
 }

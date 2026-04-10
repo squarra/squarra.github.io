@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-const posts = await Astro.glob("@pages/posts/*.mdx");
+const posts = Object.values(import.meta.glob("@pages/posts/*.mdx", { eager: true }));
 posts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
 ---
 
